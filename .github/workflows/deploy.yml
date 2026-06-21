@@ -17,6 +17,7 @@ jobs:
         host: ${{ secrets.SERVER_HOST }}
         username: ${{ secrets.SERVER_USER }}
         key: ${{ secrets.SSH_PRIVATE_KEY }}
+        port: 22
         script: |
           cd /opt/simple-web-cicd || git clone https://github.com/NatureFu/simple-web-cicd.git /opt/simple-web-cicd && cd /opt/simple-web-cicd
           git pull
